@@ -1,0 +1,28 @@
+name: acid-judge-smoke
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  lock:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: AleseyRodkin/acid-engine-2.0@v0.2.2
+        with:
+          index: locks/index.json
+
+  tamper:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Swap body
+        run: sed -i 's/cents \* qty/cents * qty * 2/' tools/compute_amount.py
+      - uses: AleseyRodkin/acid-engine-2.0@v0.2.2
+        id: judge
+        continue-on-error: true
+        with:
+          index: locks/index.json
+      - name: Tamper must FAIL
+        run: test "${{ steps.judge.outcome }}" = "failure"
