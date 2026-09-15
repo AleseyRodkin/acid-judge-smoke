@@ -2,7 +2,7 @@
 
 The hook lives in Acid Judge, not here:
 
-https://github.com/AleseyRodkin/acid-engine-2.0/blob/v0.2.13/examples/hooks/pre_tool_use.py
+https://github.com/AleseyRodkin/acid-engine-2.0/blob/v0.2.14/examples/hooks/pre_tool_use.py
 
 PreToolUse is bind only. Pre ≠ PASS. Point `ACID_LOCKS_INDEX` at this
 repo's `locks/index.json` if you wire it into a checkout that also has

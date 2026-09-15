@@ -1,7 +1,7 @@
 # Plain CLI
 
 ```bash
-pip install "acid-engine @ git+https://github.com/AleseyRodkin/acid-engine-2.0.git@v0.2.13"
+pip install "acid-engine @ git+https://github.com/AleseyRodkin/acid-engine-2.0.git@v0.2.14"
 acid-judge judge \
   --script tools/compute_amount.py \
   --plan tools/compute_amount.plan.json \
