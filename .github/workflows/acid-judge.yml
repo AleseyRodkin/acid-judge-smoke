@@ -27,3 +27,15 @@ jobs:
           index: locks/index.json
       - name: Tamper must FAIL
         run: test "${{ steps.judge.outcome }}" = "failure"
+
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Acid Judge
+        run: pip install "acid-engine @ git+https://github.com/AleseyRodkin/acid-engine-2.0.git@v0.2.13"
+      - name: Run smoke
+        run: chmod +x smoke.sh && ./smoke.sh

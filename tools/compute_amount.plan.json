@@ -33,8 +33,12 @@
   "iface": {
     "contract_id": "tools/compute_amount",
     "version": "0.1.0",
-    "inputs": {"value": "dict"},
-    "outputs": {"result": "dict"},
+    "inputs": {
+      "value": "dict"
+    },
+    "outputs": {
+      "result": "dict"
+    },
     "constraints": {
       "pure": true,
       "max_latency_ms": 200.0,

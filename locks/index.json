@@ -15,7 +15,10 @@
       "id": "compute_amount",
       "script": "tools/compute_amount.py",
       "plan": "tools/compute_amount.plan.json",
-      "input": {"cents": 199, "qty": 3}
+      "input": {
+        "cents": 199,
+        "qty": 3
+      }
     }
   ]
 }
