@@ -6,7 +6,7 @@ This repository demonstrates one property:
 > implementation before execution.
 
 It is not Acid Judge. The product is
-[AleseyRodkin/acid-engine-2.0](https://github.com/AleseyRodkin/acid-engine-2.0).
+[AleseyRodkin/acid-engine](https://github.com/AleseyRodkin/acid-engine).
 This repo is a clean-clone proof.
 
 No account. No SaaS. No API key.
@@ -60,4 +60,4 @@ site-packages. Environment variables.
 - [examples/github-action](examples/github-action/README.md)
 - [examples/claude-code](examples/claude-code/README.md)
 
-Pinned to Acid Judge **v0.2.20**. PyPI name is `acid-judge` (`pip install acid-judge`). Import stays `acid_engine`.
+Pinned to Acid Judge **v0.2.21**. PyPI name is `acid-judge` (`pip install acid-judge`). Import stays `acid_engine`.
