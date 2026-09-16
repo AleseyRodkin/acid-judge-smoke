@@ -5,7 +5,7 @@ ROOT="$(cd "$(dirname "$0")" && pwd)"
 cd "$ROOT"
 export PYTHONUNBUFFERED=1
 
-TAG="${ACID_JUDGE_TAG:-v0.2.19}"
+TAG="${ACID_JUDGE_TAG:-v0.2.20}"
 PIN="acid-judge @ git+https://github.com/AleseyRodkin/acid-engine-2.0.git@${TAG}"
 
 aj() {
