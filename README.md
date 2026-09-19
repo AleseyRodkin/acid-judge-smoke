@@ -60,4 +60,4 @@ site-packages. Environment variables.
 - [examples/github-action](examples/github-action/README.md)
 - [examples/claude-code](examples/claude-code/README.md)
 
-Pinned to Acid Judge **v0.2.23**. PyPI name is `acid-judge` (`pip install acid-judge`). Import stays `acid_engine`.
+Pinned to Acid Judge **v0.2.24**. PyPI name is `acid-judge` (`pip install acid-judge`). Import stays `acid_engine`.

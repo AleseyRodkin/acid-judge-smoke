@@ -3,7 +3,7 @@
 ```bash
 pip install acid-judge
 # from git, same metadata name:
-# pip install "acid-judge @ git+https://github.com/AleseyRodkin/acid-engine.git@v0.2.23"
+# pip install "acid-judge @ git+https://github.com/AleseyRodkin/acid-engine.git@v0.2.24"
 acid-judge judge \
   --script tools/compute_amount.py \
   --plan tools/compute_amount.plan.json \
