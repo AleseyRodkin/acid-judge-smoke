@@ -2,7 +2,7 @@
 
 The hook lives in Acid Judge, not here:
 
-https://github.com/AleseyRodkin/acid-engine/blob/v0.2.31/examples/hooks/pre_tool_use.py
+https://github.com/AleseyRodkin/acid-engine/blob/v0.2.32/examples/hooks/pre_tool_use.py
 
 PreToolUse is bind only. Pre ≠ PASS. Unknown that reached the hook is
 deny. The matcher is how Bash never hits this script. Point
