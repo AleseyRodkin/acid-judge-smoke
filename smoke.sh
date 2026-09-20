@@ -5,19 +5,20 @@ ROOT="$(cd "$(dirname "$0")" && pwd)"
 cd "$ROOT"
 export PYTHONUNBUFFERED=1
 
-TAG="${ACID_JUDGE_TAG:-v0.2.30}"
+TAG="${ACID_JUDGE_TAG:-v0.2.31}"
 PIN="acid-judge @ git+https://github.com/AleseyRodkin/acid-engine.git@${TAG}"
-
-aj() {
-  python3 -m acid_engine "$@"
-}
-
-if ! python3 -c "import acid_engine" >/dev/null 2>&1; then
-  python3 -m pip install -q "$PIN"
-fi
 
 WORK="$(mktemp -d)"
 trap 'rm -rf "$WORK"' EXIT
+python3 -m venv "$WORK/venv"
+# shellcheck disable=SC1091
+. "$WORK/venv/bin/activate"
+python -m pip install -q "$PIN"
+
+aj() {
+  python -m acid_engine "$@"
+}
+
 mkdir -p "$ROOT/receipts" "$WORK/keys" "$WORK/dep" "$WORK/body"
 
 cp tools/compute_amount.py "$WORK/body/compute_amount.py"
