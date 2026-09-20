@@ -4,7 +4,7 @@ This repository already uses the composite Action. See
 [`.github/workflows/acid-judge.yml`](../../.github/workflows/acid-judge.yml).
 
 ```yaml
-- uses: AleseyRodkin/acid-engine@v0.2.28
+- uses: AleseyRodkin/acid-engine@v0.2.29
   with:
     index: locks/index.json
     judge: true
